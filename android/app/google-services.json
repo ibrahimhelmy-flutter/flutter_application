@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "798516022746",
+    "project_id": "smart-montgk",
+    "storage_bucket": "smart-montgk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798516022746:android:4588959667cbb492a484e3",
+        "android_client_info": {
+          "package_name": "com.dt4it.Montgk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798516022746-qhhlp3v2e4pntuksf8ib0n5tu2q1s5hd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dt4it.Montgk",
+            "certificate_hash": "6a06b87146b7e8d9876ac7380b78918f6034dce5"
+          }
+        },
+        {
+          "client_id": "798516022746-e945jcf5segsflim16cg1r6190rm933n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5kj9OTIujSvcltiCIGBl207b5Ok5RFQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798516022746-e945jcf5segsflim16cg1r6190rm933n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
