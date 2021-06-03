@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:markets/src/controllers/category_controller.dart';
 import 'package:markets/src/controllers/filter_controller.dart';
+import 'package:markets/src/controllers/product_controller.dart';
 import 'package:markets/src/models/field.dart';
 import 'package:markets/src/repository/field_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
@@ -29,15 +31,15 @@ class HomeWidget extends StatefulWidget {
 
 class _HomeWidgetState extends StateMVC<HomeWidget> {
   HomeController _con;
-  
+  CategoryController _k;
+
   _HomeWidgetState() : super(HomeController()) {
     _con = controller;
   }
 
-
-
   @override
   Widget build(BuildContext context) {
+    // print(_con.Co)
     return Scaffold(
       appBar: AppBar(
         leading: new IconButton(

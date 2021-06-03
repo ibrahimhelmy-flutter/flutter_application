@@ -28,7 +28,13 @@ class _CategoryWidgetState extends StateMVC<CategoryWidget> {
   // TODO add layout in configuration file
   String layout = 'grid';
   String name;
+  String secondId;
+  String thirdId;
+  String fourId;
+  String fiveId;
+
   CategoryController _con;
+  FilterController _c;
 
   _CategoryWidgetState() : super(CategoryController()) {
     _con = controller;
@@ -36,15 +42,25 @@ class _CategoryWidgetState extends StateMVC<CategoryWidget> {
 
   @override
   void initState() {
+        name = widget.routeArgument.param==null?widget.routeArgument.id:widget.routeArgument.param['name'];
+    secondId = widget.routeArgument.param==null?widget.routeArgument.id:widget.routeArgument.param['second'];
+    thirdId = widget.routeArgument.param==null?widget.routeArgument.id:widget.routeArgument.param['third'];
+    fourId = widget.routeArgument.param==null?widget.routeArgument.id:widget.routeArgument.param['four'];
+    fiveId = widget.routeArgument.param==null?widget.routeArgument.id:widget.routeArgument.param['five'];
+
+  // thirdId = widget.routeArgument.param['third'];
     _con.listenForProductsByCategory(id: widget.routeArgument.id);
+   widget.routeArgument.param==null? null:_con.listenForProductsByCategory(id: secondId);
+    widget.routeArgument.param==null? null:_con.listenForProductsByCategory(id: thirdId);
     _con.listenForCategory(id: widget.routeArgument.id);
     _con.listenForCart();
-    name = widget.routeArgument.param['name'];
+  
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    print(widget.routeArgument.id);
     return Scaffold(
       key: _con.scaffoldKey,
       drawer: DrawerWidget(),
@@ -110,7 +126,7 @@ class _CategoryWidgetState extends StateMVC<CategoryWidget> {
                     color: Theme.of(context).hintColor,
                   ),
                   title: Text(
-                    name ,
+                    name,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.headline4,

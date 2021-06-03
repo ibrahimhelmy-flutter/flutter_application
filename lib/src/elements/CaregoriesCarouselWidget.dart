@@ -27,6 +27,7 @@ class CategoriesCarouselWidget extends StatelessWidget {
                 return new CategoriesCarouselItemWidget(
                   marginLeft: _marginLeft,
                   category: this.categories.elementAt(index),
+                  index: index,
                 );
               },
             ));
